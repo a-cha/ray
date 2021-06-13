@@ -10,12 +10,13 @@ The program can render several figures with multiple light sources.
 
 Run `make` inside the repository's directory to build `miniRT` binary. 
 
-Program needs the path to configuration file as an argument (examples in **scenes** directory). If flag `--save` is presented as a second argument, program will make a screenshot ad save it in the working directory. 
+Program needs the path to configuration file as an argument (examples in **scenes** directory). If flag `--save` is presented as a second argument, program will make a screenshot and save it in the working directory. 
 
 <details>
     <summary>
         Setting up the configuration file
     </summary>
+    <br/>
     <p>You can specify what figures to render (<i>plane</i>, <i>sphere</i>, <i>square</i>, <i>cylinder</i> and <i>triangle</i> available), several light sources and points of view.</p>
     <p><b>General scene settings:</b></p>
     <ul>
