@@ -1,0 +1,12 @@
+.idea
+obj
+miniRT.dSYM
+libmlx.dylib.dSYM
+cmake-build-release
+cmake-build-debug
+miniRT
+CMakeLists.txt
+test.c
+libmlx.dylib
+librt.a
+miniRT_checklist.pages

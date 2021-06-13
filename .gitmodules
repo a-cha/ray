@@ -1,0 +1,5 @@
+[submodule "libft"]
+	path = libft
+	url = https://github.com/a-cha/c_library.git
+
+
