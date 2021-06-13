@@ -16,7 +16,9 @@
 # include <fcntl.h>
 # include <math.h>
 # include "mlx.h"
-# include "../libft/includes/libft.h"
+# include "libft.h"
+# include "get_next_line.h"
+# include "libasm.h"
 
 /*
 ** ----- Error codes -----

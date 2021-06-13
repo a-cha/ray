@@ -52,7 +52,7 @@ static t_rgb	*get_light(t_scene *scene, t_list *lights, t_clst data)
 		error_exit("Malloc error", MALLOC_ERR, scene);
 	while (lights)
 	{
-		curr_l = lights->content;
+		curr_l = lights->data;
 		l_col = calculate_light(scene, curr_l, data);
 		vect_sum1(light, *l_col);
 		free(l_col);

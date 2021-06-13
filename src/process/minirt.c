@@ -19,7 +19,7 @@ void			fill_img(t_scene *scene, t_list *cams)
 	t_cam		*cam;
 	int			col;
 
-	cam = cams->content;
+	cam = cams->data;
 	scene->img = image_init(scene, scene->x, scene->y);
 	scale = (((double)scene->x / 2) / tan((double)cam->fov / 2 * M_PI / 180));
 	s.v1.z = 1;

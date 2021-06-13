@@ -53,7 +53,7 @@ void		draw_triangle(t_list *tr, t_ray ray, void **obj, t_clst *cl_data)
 
 	while (tr)
 	{
-		curr_tr = tr->content;
+		curr_tr = tr->data;
 		if ((encount_tr(*curr_tr, ray, cl_data)))
 			*obj = curr_tr;
 		tr = tr->next;

@@ -27,7 +27,7 @@ char		parse_light(char *line, t_scene **scene)
 		light->bright = ft_atof(line);
 		to_the_next_param(&line);
 		light->colour = parse_colour(line);
-		list->content = light;
+		list->data = light;
 		ft_lstadd_front(&((*scene)->light), list);
 	}
 	else

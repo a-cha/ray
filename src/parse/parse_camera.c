@@ -27,7 +27,7 @@ int			parse_cam(char *line, t_scene **scene)
 		parse_coord(line, &(cam->or_c.x), &(cam->or_c.y), &(cam->or_c.z));
 		to_the_next_param(&line);
 		cam->fov = ft_atoi(line);
-		list->content = cam;
+		list->data = cam;
 		ft_lstadd_front(&((*scene)->cam), list);
 	}
 	else

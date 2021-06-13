@@ -29,7 +29,7 @@ char		parse_sq(char *line, t_scene **scene)
 		sq->width = ft_atof(line);
 		to_the_next_param(&line);
 		sq->colour = parse_colour(line);
-		list->content = sq;
+		list->data = sq;
 		ft_lstadd_front(&((*scene)->sq), list);
 	}
 	else

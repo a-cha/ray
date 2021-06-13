@@ -42,7 +42,7 @@ void	draw_sphere(t_list *sp, t_ray ray, void **obj, t_clst *cl_data)
 
 	while (sp)
 	{
-		curr_sp = sp->content;
+		curr_sp = sp->data;
 		if ((encount_sp(*curr_sp, ray, cl_data)))
 			*obj = curr_sp;
 		sp = sp->next;

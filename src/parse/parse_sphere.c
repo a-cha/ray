@@ -27,7 +27,7 @@ char		parse_sp(char *line, t_scene **scene)
 		sp->rad = ft_atof(line);
 		to_the_next_param(&line);
 		sp->colour = parse_colour(line);
-		list->content = sp;
+		list->data = sp;
 		ft_lstadd_front(&((*scene)->sp), list);
 	}
 	else

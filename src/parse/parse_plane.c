@@ -27,7 +27,7 @@ char		parse_pl(char *line, t_scene **scene)
 		parse_coord(line, &(pl->or_d.x), &(pl->or_d.y), &(pl->or_d.z));
 		to_the_next_param(&line);
 		pl->colour = parse_colour(line);
-		list->content = pl;
+		list->data = pl;
 		ft_lstadd_front(&((*scene)->pl), list);
 	}
 	else

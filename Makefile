@@ -20,11 +20,12 @@ SRC_DIR := ./src/
 SRC_SUBDIRS := figures/ math/ parse/ process/
 SRC_ALL_DIRS := $(addsuffix :, $(addprefix $(SRC_DIR), $(SRC_SUBDIRS)))
 OBJ_DIR := ./obj/
-INCS_DIR := ./includes/
+INCS_DIR := ./includes/ ./libft/includes/ ./libft/src/gnl/ ./libft/src/libasm/includes/
 LIB_DIRS := ./libft/ ./mlx/
 LIBFT_DIR := ./libft/
 MLX_DIR := ./mlx/
-LINK_DIRS := -I $(INCS_DIR) $(addprefix -L, $(LIB_DIRS))
+LINK_INC_DIRS := $(addprefix -I, $(INCS_DIR))
+LINK_LIB_DIRS := $(addprefix -L, $(LIB_DIRS))
 
 # Files
 NAME := miniRT
@@ -69,7 +70,7 @@ all: make_libs $(NAME)
 # Add printf's object files to the libftprintf.a
 # Now, it's complete collection of all necessary functions into libftprintf.a
 $(NAME): $(PROJ_LIB) #$(SRC_DIR)minirt.c
-	$(CC) $(CFLAGS) -o $(NAME) $(LINK_DIRS) $(SRC_DIR)process/minirt.c $(PROJ_LIB) $(LINK_FLAGS)
+	$(CC) $(CFLAGS) -o $(NAME) $(LINK_LIB_DIRS) $(LINK_INC_DIRS) $(SRC_DIR)process/minirt.c $(PROJ_LIB) $(LINK_FLAGS)
 	@echo "\033[32m$(NAME) successfully created\033[0m" ✅
 
 # Make library from project's obj files
@@ -81,9 +82,9 @@ $(PROJ_LIB): $(O_WITH_DIR)
 VPATH = $(SRC_ALL_DIRS)
 
 # Dependencies that allow recompile obj files only from changed source files
-$(OBJ_DIR)%.o: %.c $(INCS_DIR)minirt.h
+$(OBJ_DIR)%.o: %.c ./includes/minirt.h
 	@mkdir -p $(OBJ_DIR)
-	$(CC) $(CFLAGS) -I $(INCS_DIR) -c $< -o $@
+	$(CC) $(CFLAGS) $(LINK_INC_DIRS) -c $< -o $@
 
 # Building libft.a by lib's own Makefile.
 make_libs:

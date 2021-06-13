@@ -44,7 +44,7 @@ void		draw_square(t_list *sq, t_ray ray, void **obj, t_clst *cl_data)
 
 	while (sq)
 	{
-		curr_sq = sq->content;
+		curr_sq = sq->data;
 		if ((encount_sq(*curr_sq, ray, cl_data)))
 			*obj = curr_sq;
 		sq = sq->next;

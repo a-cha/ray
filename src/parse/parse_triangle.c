@@ -29,7 +29,7 @@ char		parse_tr(char *line, t_scene **scene)
 		parse_coord(line, &(tr->d3.x), &(tr->d3.y), &(tr->d3.z));
 		to_the_next_param(&line);
 		tr->colour = parse_colour(line);
-		list->content = tr;
+		list->data = tr;
 		ft_lstadd_front(&((*scene)->tr), list);
 	}
 	else

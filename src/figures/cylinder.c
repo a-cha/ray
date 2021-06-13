@@ -85,7 +85,7 @@ void		draw_cylinder(t_list *cy, t_ray ray, void **obj, t_clst *cl_data)
 
 	while (cy)
 	{
-		curr_cy = cy->content;
+		curr_cy = cy->data;
 		if ((encount_cy(*curr_cy, ray, cl_data)))
 			*obj = curr_cy;
 		cy = cy->next;

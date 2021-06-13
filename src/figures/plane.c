@@ -40,7 +40,7 @@ void		draw_plane(t_list *pl, t_ray ray, void **obj, t_clst *cl_data)
 
 	while (pl)
 	{
-		curr_pl = pl->content;
+		curr_pl = pl->data;
 		if ((encount_pl(*curr_pl, ray, cl_data)))
 			*obj = curr_pl;
 		pl = pl->next;

@@ -31,7 +31,7 @@ char		parse_cy(char *line, t_scene **scene)
 		cy->height = ft_atof(line);
 		to_the_next_param(&line);
 		cy->colour = parse_colour(line);
-		list->content = cy;
+		list->data = cy;
 		ft_lstadd_front(&((*scene)->cy), list);
 	}
 	else
