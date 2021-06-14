@@ -4,7 +4,7 @@
 
 The program can render several figures with multiple light sources.
 
-<img width="700" src="https://user-images.githubusercontent.com/81406370/121809835-1d49b680-cc67-11eb-91d6-d463baba5fb4.gif">
+<img width="700" src="https://user-images.githubusercontent.com/81406370/121876671-71f63b80-cd12-11eb-98e7-e74db918018d.gif">
 
 ## Usage
 
